@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:id="@+id/bg"
+        android:scaleType="centerCrop"
+        android:src="#000"
+        ></ImageView>
+
+    <com.faith.sample.view.MediaViewPager
+        android:id="@+id/vp"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+    </com.faith.sample.view.MediaViewPager>
+
+
+    <com.faith.sample.view.LoadingView
+        android:id="@+id/loading_view"
+        android:layout_alignParentBottom="true"
+        android:layout_margin="12dp"
+        android:layout_width="wrap_content"
+        android:layout_height="26dp"
+        ></com.faith.sample.view.LoadingView>
+
+
+    <ImageView
+        android:id="@+id/iv_download"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:padding="12dp"
+        android:src="@mipmap/download"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        ></ImageView>
+
+</RelativeLayout>

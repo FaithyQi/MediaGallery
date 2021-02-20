@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="wrap_content"
+    android:layout_height="26dp">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:minWidth="120dp"
+        android:layout_height="match_parent"
+        android:layout_centerVertical="true"
+        android:id="@+id/tv_progress"
+        android:gravity="center"
+        android:textColor="#fff"
+        android:text="50%"
+        android:textSize="12sp"
+        android:background="@drawable/bg_loading"
+        ></TextView>
+
+
+    <ImageView
+        android:id="@+id/iv_cancel"
+        android:layout_width="26dp"
+        android:layout_height="26dp"
+        android:layout_alignRight="@+id/tv_progress"
+        android:src="@mipmap/ic_close"
+        android:padding="9dp"
+        android:visibility="gone"
+        ></ImageView>
+
+
+</RelativeLayout>
