@@ -44,6 +44,11 @@ public class MediaGalleryView<T extends MediaModel> extends RelativeLayout {
 
     private void init(){
         LayoutInflater.from(getContext()).inflate(R.layout.media_gallery,this);
+        injectView();
+    }
+
+    private void injectView(){
+
         viewPager = this.findViewById(R.id.vp);
         backGround = this.findViewById(R.id.bg);
         ivDownload = this.findViewById(R.id.iv_download);

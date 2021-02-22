@@ -17,6 +17,7 @@
        android:id="@+id/back"
        android:layout_width="45dp"
        android:layout_height="45dp"
+       android:visibility="gone"
        android:layout_alignParentRight="true"
        android:src="@mipmap/ic_close"
        android:padding="12dp"

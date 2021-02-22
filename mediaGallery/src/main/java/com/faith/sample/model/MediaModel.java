@@ -7,7 +7,7 @@ public abstract class MediaModel  {
     public abstract String getUrl();
 
     /**
-     * 照片/视频
+     * photo 1 ,video 2
      * @return
      */
     public abstract int getMediaType();

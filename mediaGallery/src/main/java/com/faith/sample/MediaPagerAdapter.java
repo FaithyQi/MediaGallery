@@ -37,14 +37,17 @@ public class MediaPagerAdapter<T extends MediaModel> extends PagerAdapter {
 
     @Override
     public boolean isViewFromObject(@NonNull View view, @NonNull Object object) {
-        return false;
+        return view==object;
     }
 
     @Override
     public void destroyItem(@NonNull ViewGroup container, int position, @NonNull Object object) {
         container.removeView((View) object);
     }
-
+    @Override
+    public int getItemPosition(Object object) {
+        return POSITION_NONE;
+    }
     @NonNull
     @Override
     public Object instantiateItem(@NonNull ViewGroup container, int position) {
@@ -52,16 +55,17 @@ public class MediaPagerAdapter<T extends MediaModel> extends PagerAdapter {
         MediaModel mediaModel = datas.get(position);
         View root = LayoutInflater.from(context).inflate(R.layout.item_gallery,null);
         PhotoView photoView = root.findViewById(R.id.pv);
-
-        if(mediaModel.getMediaType()==MEDIA_TYPE_PHOTO){
-            photoView.setVisibility(View.VISIBLE);
-            Glide.with(context)
-                    .load(mediaModel.getUrl())
-                    .into(photoView);
-        }else{
-
-
-        }
+        photoView.setVisibility(View.VISIBLE);
+        Glide.with(context)
+                .load(mediaModel.getUrl())
+                .into(photoView);
+//        if(mediaModel.getMediaType()==MEDIA_TYPE_PHOTO){
+//
+//        }else{
+//
+//
+//        }
+        container.addView(root);
         return root;
     }
 }
